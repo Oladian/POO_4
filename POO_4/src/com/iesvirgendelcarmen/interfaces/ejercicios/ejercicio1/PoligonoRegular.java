@@ -1,9 +1,9 @@
 package com.iesvirgendelcarmen.interfaces.ejercicios.ejercicio1;
 
 public abstract class PoligonoRegular implements Comparable<PoligonoRegular>{
-	String nombre;
-	int numLados;
-	double longitud;
+	private String nombre;
+	private int numLados;
+	protected double longitud;
 	
 	public PoligonoRegular(String nombre, int numLados, double longitud) {
 		this.nombre = nombre;

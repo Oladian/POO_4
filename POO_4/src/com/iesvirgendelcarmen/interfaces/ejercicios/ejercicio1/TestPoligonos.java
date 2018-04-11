@@ -19,18 +19,18 @@ public class TestPoligonos {
 		
 		ListaPoligonoRegular lista = new ListaPoligonoRegular();
 		
-		lista.añadirPoligono(triangulo1);
-		lista.añadirPoligono(triangulo2);
-		lista.añadirPoligono(triangulo3);
-		lista.añadirPoligono(cuadrado1);
-		lista.añadirPoligono(cuadrado2);
-		lista.añadirPoligono(cuadrado3);
-		lista.añadirPoligono(hexagono1);
-		lista.añadirPoligono(hexagono2);
-		lista.añadirPoligono(hexagono3);
+		lista.addPoligono(triangulo1);
+		lista.addPoligono(triangulo2);
+		lista.addPoligono(triangulo3);
+		lista.addPoligono(cuadrado1);
+		lista.addPoligono(cuadrado2);
+		lista.addPoligono(cuadrado3);
+		lista.addPoligono(hexagono1);
+		lista.addPoligono(hexagono2);
+		lista.addPoligono(hexagono3);
 		
 		List<PoligonoRegular> listaPoligonos = lista.getLista();
-		
+				
 		for (PoligonoRegular poligonoRegular: listaPoligonos) {
 			System.out.printf("%s Area: %.2f Perimetro: %.2f%n",
 					poligonoRegular,poligonoRegular.getArea(),poligonoRegular.getPerimetro());
@@ -42,9 +42,12 @@ public class TestPoligonos {
 					System.out.println(poligonoRegular);
 			}
 		}
-		System.out.println("==================================================================");
+		
 		for (PoligonoRegular poligonoRegular : listaPoligonos) {
 			System.out.println(poligonoRegular.compareTo(triangulo1));
 		}
+		
+		System.out.println("==================================================================");	
+		System.out.println(lista.getListaOrdenada());
 	}
 }
