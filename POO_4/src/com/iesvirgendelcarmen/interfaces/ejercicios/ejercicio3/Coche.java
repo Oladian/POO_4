@@ -1,30 +1,36 @@
 package com.iesvirgendelcarmen.interfaces.ejercicios.ejercicio3;
+public class Coche extends TipoVehiculo {
 
-public class Coche implements Vehiculo {
-
-	private String nombre;
-	private int velocidad;
+	private int potencia;
 	
-	public Coche() {
-		this.nombre = "coche";
-		this.velocidad = 0;
+	public Coche(int velocidad, int numPlazas, int potencia) {
+		super(velocidad, numPlazas);
+		this.potencia = potencia;
+	}
+	
+	public Coche(int potencia) {
+		super(5); //numero de plazas, inicializa la velocidad a 0
+		this.potencia = potencia;
 	}
 
 	@Override
 	public String acelerar(int valor) {
-		this.velocidad=valor;
-		if(velocidad>VELOCIDAD_MAXIMA)
-			System.out.println("Velocidad máxima sobrepasada.");
-		return "El "+nombre+" ha pasado a velocidad "+velocidad;
+		return getTipoCombustible()+" "+super.acelerar(valor);
 	}
 
 	@Override
 	public String frenar(int valor) {
-		this.velocidad=valor;
-		return "El "+nombre+" ha pasado a velocidad "+velocidad;
+		return getTipoCombustible()+" "+super.frenar(valor);
 	}
 
+	@Override
 	public int numeroPlazas() {
-		return 5;
+		return super.numeroPlazas();
 	}
+
+	public int getPotencia() {
+		return potencia;
+	}
+	
+	
 }

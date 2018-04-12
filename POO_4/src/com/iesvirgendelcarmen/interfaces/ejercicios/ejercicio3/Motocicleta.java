@@ -1,30 +1,41 @@
 package com.iesvirgendelcarmen.interfaces.ejercicios.ejercicio3;
 
-public class Motocicleta implements Vehiculo {
+public class Motocicleta extends TipoVehiculo{
 
-	private String nombre;
-	private int velocidad;
 	
-	public Motocicleta() {
-		this.nombre = "moto";
-		this.velocidad = 0;
+	private int cilindrada;
+	//private String nombre="moto";
+	
+	public Motocicleta(int velocidad, int cilindrada) {
+		super(velocidad, 2);
+		this.cilindrada = cilindrada;
+	}
+	
+	public Motocicleta(int cilindrada) {
+		super(2); //numero de plazas, inicializa la velocidad a 0
+		this.cilindrada = cilindrada;
+	}
+	
+	/*public Motocicleta(double cilindrada) {
+		this(0, 2);
+		this.cilindrada = (int) cilindrada;
+	}*/
+
+	public int getCilindrada() {
+		return cilindrada;
 	}
 
+	public void setCilindrada(int cilindrada) {
+		this.cilindrada = cilindrada;
+	}
+	
 	@Override
 	public String acelerar(int valor) {
-		this.velocidad=valor;
-		if(velocidad>VELOCIDAD_MAXIMA)
-			System.out.println("Velocidad máxima sobrepasada.");
-		return "La "+nombre+" ha pasado a velocidad "+velocidad;
+		return "Motocicleta "+" "+getTipoCombustible()+" "+super.acelerar(valor);
 	}
-
+	
 	@Override
 	public String frenar(int valor) {
-		this.velocidad=valor;
-		return "La "+nombre+" ha pasado a velocidad "+velocidad;
-	}
-
-	public int numeroPlazas() {
-		return 2;
+		return "Motocicleta "+" "+getTipoCombustible()+" "+super.frenar(valor);
 	}
 }

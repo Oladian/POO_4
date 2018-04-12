@@ -8,7 +8,7 @@ public class TestEstudiante {
 	
 	
 	public static void main(String[] args) {
-		List<Estudiante> lista = new ArrayList();
+		List<Estudiante> lista = new ArrayList<Estudiante>();
 		
 		Estudiante est1 = new Estudiante("Paco", 62);
 		Estudiante est2 = new Estudiante("Paca", 13);

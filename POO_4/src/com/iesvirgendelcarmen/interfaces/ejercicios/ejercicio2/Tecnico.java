@@ -15,4 +15,8 @@ public class Tecnico extends Trabajador {
 		return PAGA_DIARIA*diasTrabajados;
 	}
 
+	public boolean isTitulacionSuperior() {
+		return titulacionSuperior;
+	}
+
 }

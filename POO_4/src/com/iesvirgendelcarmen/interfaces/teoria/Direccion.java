@@ -1,7 +1,5 @@
 package com.iesvirgendelcarmen.interfaces.teoria;
 
-import com.iesvirgendelcarmen.interfaces.*;
-
 public class Direccion implements Direccionable {
 
 	private String direccion;
