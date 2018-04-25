@@ -2,9 +2,16 @@ package com.iesvirgendelcarmen.interfaces.ejercicios.ejercicio5;
 
 public class TestMath3 {
 	public static void main(String[] args) {
+		
+		
+	
 		Math3 math3 = new Math3();
+		
 		int[] numeroInt = new int[12];
 		double[] numeroDouble = new double[12];
+		
+		
+		
 		
 			for (int i = 0; i < numeroInt.length; i++) {
 				numeroInt[i]=(int) (100*Math.random()+1);

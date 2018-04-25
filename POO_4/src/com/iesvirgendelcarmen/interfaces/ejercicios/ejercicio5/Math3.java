@@ -2,6 +2,8 @@ package com.iesvirgendelcarmen.interfaces.ejercicios.ejercicio5;
 
 public final class Math3 implements Extremos {
 
+	
+	
 	@Override
 	public int min(int[] a) {
 		 int menor = a[0];
